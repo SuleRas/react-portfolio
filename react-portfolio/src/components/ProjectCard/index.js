@@ -3,10 +3,12 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 
 // react bootstrap
-function ProjectCard(title, image, description, link, GitHub) {
+function ProjectCard({ title, image, description, link, GitHub }) {
   return (
     <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src={image} alt={title} />
+      <a href={link}>
+        <Card.Img variant="top" src={image} alt={title} />
+      </a>
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>
